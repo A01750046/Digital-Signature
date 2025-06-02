@@ -107,8 +107,14 @@ def verificar_firma(file_bytes, signature, public_key):
     except Exception:
         return False
 
-# === STREAMLIT APP ===
-st.title("🔐 Firma Digital con RSA")
+# Streamlit
+col1, col2 = st.columns([4, 2])
+with col1:
+    st.title(" ")
+    st.title("🔐 Firma Digital con RSA")
+with col2:
+    st.image("prepanet.png", width=250)
+
 
 menu = st.sidebar.selectbox("Menú", ["Registrarse", "Iniciar sesión"])
 
